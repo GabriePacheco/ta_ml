@@ -1,7 +1,6 @@
 import streamlit as st 
 import pandas as pd 
 import pickle 
-import numpy as np
 
 modelName  = "tcm_model.pkl"
 encodersName = "tcm_encoder.pkl"
