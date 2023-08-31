@@ -29,7 +29,7 @@ def main():
     st.title("T.A. MODELO PROMOCIONALES")
     st.caption("Encuentra el mejor programa para el lanzamiento del promocional")
 
-    st.sidebar.header("Entrada de datos")
+    st.sidebar.subheader ("Entrada de datos")
     st.sidebar.divider()
 
     def get_parametros(): 
@@ -64,6 +64,8 @@ def main():
     
 
     df = get_parametros()
+    link = '[Dasboard](https://app.powerbi.com/reportEmbed?reportId=fc993574-f65b-4fd7-a4ba-624750afd5b4&autoAuth=true&ctid=e9763399-4de0-4078-a8dc-a6cb985b4841)'
+    st.sidebar.markdown(link, unsafe_allow_html = True)
 
     st.dataframe(df, use_container_width = True)
 
