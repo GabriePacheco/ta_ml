@@ -1,6 +1,8 @@
 import streamlit as st 
 import pandas as pd 
 import pickle 
+from logo import add_logo
+
 
 modelName  = "tcm_model.pkl"
 encodersName = "tcm_encoder.pkl"
@@ -26,11 +28,13 @@ def getTopTen( programa ):
     return dp.groupby("ITEM")["RATING"].mean().sort_values(ascending =  False).head(10)
 
 def main(): 
+    add_logo()
     st.title("T.A. MODELO PROMOCIONALES")
     st.caption("Encuentra el mejor programa para el lanzamiento del promocional")
 
-    st.sidebar.subheader ("Entrada de datos")
-    st.sidebar.divider()
+    st.sidebar.text ("Entrada de datos")
+
+
 
     def get_parametros(): 
 
@@ -77,3 +81,6 @@ def main():
     
 if __name__ == '__main__': 
     main()
+
+
+

@@ -4,9 +4,11 @@ import numpy as np
 # importar librerias necesarias 
 from sklearn.model_selection import train_test_split
 from sklearn.tree import DecisionTreeClassifier
+from sklearn.tree import DecisionTreeRegressor
 from sklearn.preprocessing import LabelEncoder
 import pickle
 
+# CREAR MODELOS DESITIONA TREE CLASSIFIER 
 # cargar dataframe
 df = pd.read_csv( 'promocionales_2023.csv')
 
@@ -39,3 +41,4 @@ encodersName = "tcm_encoder.pkl"
 
 pickle.dump( modelo,  open(modelName, 'wb')) 
 pickle.dump(encoders,  open(encodersName, 'wb')) 
+
