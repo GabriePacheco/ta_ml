@@ -1,6 +1,11 @@
 import streamlit as st  
 
 def add_logo():
+    st.set_page_config(
+        page_title="Promos - Teleamazonas ",
+        page_icon="chart_with_upwards_trend",
+        layout="wide",
+    )
     st.markdown(
         """
         <style>
@@ -26,6 +31,7 @@ def add_logo():
         </style>
         """,
         unsafe_allow_html=True,
+
     )
 
 
